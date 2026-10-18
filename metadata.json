@@ -1,0 +1,8 @@
+{
+  "name": "Tara Mindcare | Dr Anne Rosario - Counselling Psychologist",
+  "description": "Tara Mindcare - Dr Anne Rosario, Counselling Psychologist. Heal • Empower • Thrive. Safe, confidential counselling for stress, self-esteem, relationships, and emotional wellbeing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
