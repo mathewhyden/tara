@@ -18,21 +18,12 @@ import {
 import {
   IMG,
   SERVICES_DATA,
+  SERVICE_IMAGES,
   TESTIMONIALS_DATA,
   BLOG_POSTS_DATA,
-  TOPIC_IMAGES,
   ServiceItem,
   BlogPost,
 } from '../data/siteData';
-
-const SERVICE_TOPIC_IMAGES: Record<string, string> = {
-  'trauma-recovery': TOPIC_IMAGES.traumaRecovery,
-  'narcissistic-abuse': TOPIC_IMAGES.narcissisticAbuseRecovery,
-  'inner-child-resilience': TOPIC_IMAGES.emotionalResilience,
-  'positive-psychology-coaching': TOPIC_IMAGES.personalGrowth,
-  'mindfulness-ei': TOPIC_IMAGES.mindfulness,
-  'grief-healing': TOPIC_IMAGES.griefHealing,
-};
 
 interface Home1Props {
   onOpenService: (service: ServiceItem) => void;
@@ -174,7 +165,7 @@ export const Home1: React.FC<Home1Props> = ({
               index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
             }`}
           >
-            {/* Background image with subtle overlay */}
+            {/* Background image with a purple overlay */}
             <div
               className="absolute inset-0 bg-cover bg-center bg-no-repeat transform scale-105 transition-transform duration-10000"
               style={{ backgroundImage: `url(${slide.bgImage})` }}
@@ -316,10 +307,10 @@ export const Home1: React.FC<Home1Props> = ({
           </p>
         </motion.div>
 
-        <Carousel label="Areas of support" items={SERVICES_DATA.map((service, i) => (
+        <Carousel label="Areas of support" items={SERVICES_DATA.map((service) => (
           <div key={service.id} className="group bg-white border border-[#E8DCE8] rounded-2xl overflow-hidden h-full flex flex-col hover:shadow-xl transition-shadow duration-300">
             <div className="relative h-44">
-              <div className="absolute inset-0 overflow-hidden"><img src={SERVICE_TOPIC_IMAGES[service.id] ?? IMG.panels[i % IMG.panels.length]} alt={service.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" /></div>
+              <div className="absolute inset-0 overflow-hidden"><img src={SERVICE_IMAGES[service.id]} alt={service.title} className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-700" loading="lazy" /></div>
               <div className="absolute bottom-0 left-6 translate-y-1/2 w-14 h-14 rounded-full bg-white shadow-md flex items-center justify-center border border-[#E8DCE8]">{getServiceIcon(service.iconName)}</div>
             </div>
             <div className="p-6 pt-10 flex flex-col flex-1 justify-between">
@@ -340,11 +331,8 @@ export const Home1: React.FC<Home1Props> = ({
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#2C2C2C] mt-3">Find Clarity. Build Confidence. Embrace Intentional Living.</h2>
         </div>
         <Carousel3D faces={[
-          ...SERVICES_DATA.slice(0, 3).map((s, i) => ({ img: IMG.panels[i], label: s.title })),
-          { img: IMG.hero[0], label: 'Heal' },
-          ...SERVICES_DATA.slice(3, 6).map((s, i) => ({ img: IMG.panels[i + 3], label: s.title })),
-          { img: IMG.hero[1], label: 'Empower' },
-          { img: IMG.hero[2], label: 'Thrive' },
+          ...SERVICES_DATA.map((service) => ({ img: SERVICE_IMAGES[service.id], label: service.title })),
+          { img: IMG.brandHealEmpowerThrive, label: 'Heal • Empower • Thrive' },
         ]} />
       </section>
 

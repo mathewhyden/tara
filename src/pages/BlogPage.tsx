@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { IMG } from '../data/siteData';
 import {
-  Search,
   ArrowRight,
   User,
   Clock,
@@ -27,7 +26,6 @@ export const BlogPage: React.FC<BlogPageProps> = ({
   onSelectArticle,
   setCurrentPage,
 }) => {
-  const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
   const categories = [
@@ -40,15 +38,10 @@ export const BlogPage: React.FC<BlogPageProps> = ({
   ];
 
   const filteredPosts = BLOG_POSTS_DATA.filter((post) => {
-    const matchesSearch =
-      post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      post.tags.some((t) => t.toLowerCase().includes(searchQuery.toLowerCase()));
-
     const matchesCategory =
       selectedCategory === 'all' || post.category === selectedCategory;
 
-    return matchesSearch && matchesCategory;
+    return matchesCategory;
   });
 
   return (
@@ -106,7 +99,6 @@ export const BlogPage: React.FC<BlogPageProps> = ({
                 <p className="text-sm text-gray-500">No articles matched your criteria.</p>
                 <button
                   onClick={() => {
-                    setSearchQuery('');
                     setSelectedCategory('all');
                   }}
                   className="mt-3 text-xs font-bold uppercase tracking-wider text-[#7F4B7C] underline cursor-pointer"
@@ -246,23 +238,6 @@ export const BlogPage: React.FC<BlogPageProps> = ({
 
           {/* Right Column: Sidebar (col-span-4) (Balanced Box & Rounded-2xl Cards) */}
           <div className="lg:col-span-4 space-y-8 lg:sticky lg:top-24 lg:self-start">
-            {/* Widget 1: Search (Crisp Box container with rounded-full input) */}
-            <div className="bg-white p-6 border border-[#E8DCE8] rounded-none">
-              <h3 className="font-serif text-base font-bold text-[#2C2C2C] uppercase tracking-wider mb-4 border-b border-[#7F4B7C] pb-2">
-                Search Articles
-              </h3>
-              <div className="relative">
-                <input
-                  type="text"
-                  placeholder="Keywords (stress, boundaries...)"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full bg-[#FAF6EE] border border-[#E8DCE8] pl-4 pr-10 py-2.5 text-xs text-[#2C2C2C] rounded-full focus:outline-none focus:border-[#7F4B7C]"
-                />
-                <Search className="w-4 h-4 text-gray-400 absolute right-3.5 top-3" />
-              </div>
-            </div>
-
             {/* Widget 2: Author / Psychologist Bio (Rounded-2xl Card) */}
             <div className="bg-white p-6 border border-[#E8DCE8] rounded-2xl shadow-sm text-center">
               <h3 className="font-serif text-base font-bold text-[#2C2C2C] uppercase tracking-wider mb-4 border-b border-[#7F4B7C] pb-2">

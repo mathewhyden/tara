@@ -78,7 +78,7 @@ export const Header: React.FC<HeaderProps> = ({
             onClick={() => handleNavigate('home1')}
             className="text-left focus:outline-none group cursor-pointer"
           >
-            <BrandLogo />
+            <BrandLogo size="large" />
           </button>
 
           {/* Desktop Navigation Links */}
@@ -165,19 +165,6 @@ export const Header: React.FC<HeaderProps> = ({
                     }`}
                   >
                     Standard Blog
-                  </button>
-                  <button
-                    onClick={() => {
-                      if (setBlogLayout) setBlogLayout('masonry');
-                      handleNavigate('blog');
-                    }}
-                    className={`w-full text-left px-3.5 py-2 text-xs font-medium uppercase tracking-wider transition-colors cursor-pointer rounded-xl ${
-                      currentPage === 'blog' && blogLayout === 'masonry'
-                        ? 'bg-[#F1E8F1] text-[#7F4B7C]'
-                        : 'text-[#4A4A4A] hover:bg-[#F1E8F1] hover:text-[#7F4B7C]'
-                    }`}
-                  >
-                    Masonry Blog
                   </button>
                 </div>
               )}

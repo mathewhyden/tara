@@ -1,10 +1,18 @@
 import logoUrl from '../assets/logo.webp';
 import portraitUrl from '../assets/anne.jpg';
 import heroHealingOfficeUrl from '../assets/photos/hero-healing-office.webp';
+import brandHealEmpowerThriveUrl from '../assets/photos/brand-heal-empower-thrive.jpg';
+import relationshipCounsellingServiceUrl from '../assets/photos/service-relationship-counselling-couple.jpg';
+import couplesMarriageServiceUrl from '../assets/photos/service-couples-marriage-counselling.jpg';
+import traumaRecoveryServiceUrl from '../assets/photos/service-trauma-recovery.jpg';
+import narcissisticRecoveryServiceUrl from '../assets/photos/service-narcissistic-abuse-recovery.jpg';
+import emotionalResilienceServiceUrl from '../assets/photos/service-emotional-resilience.jpg';
+import positivePsychologyServiceUrl from '../assets/photos/service-positive-psychology-coaching.jpg';
+import mindfulnessServiceUrl from '../assets/photos/service-mindfulness-ei.jpg';
+import griefHealingServiceUrl from '../assets/photos/service-grief-healing.jpg';
 import traumaRecoveryUrl from '../assets/photos/trauma-recovery.webp';
 import narcissisticAbuseRecoveryUrl from '../assets/photos/narcissistic-abuse-recovery.webp';
 import emotionalResilienceUrl from '../assets/photos/emotional-resilience.webp';
-import personalGrowthUrl from '../assets/photos/personal-growth.webp';
 import mindfulnessUrl from '../assets/photos/mindfulness.webp';
 import griefHealingUrl from '../assets/photos/grief-healing.webp';
 import emotionalWellbeingUrl from '../assets/photos/emotional-wellbeing.webp';
@@ -12,10 +20,15 @@ import healthyRelationshipsUrl from '../assets/photos/healthy-relationships.webp
 import stressManagementUrl from '../assets/photos/stress-management.webp';
 import selfUnderstandingUrl from '../assets/photos/self-understanding.webp';
 
+// Use the journaling photo for personal-growth placements; the former garden
+// path image was a poor fit for the site and is no longer used.
+const personalGrowthUrl = selfUnderstandingUrl;
+
 export const IMG = {
   panels: [traumaRecoveryUrl, narcissisticAbuseRecoveryUrl, emotionalResilienceUrl, personalGrowthUrl, mindfulnessUrl, griefHealingUrl],
   logo: logoUrl,
   portrait: portraitUrl,
+  brandHealEmpowerThrive: brandHealEmpowerThriveUrl,
   hero: [heroHealingOfficeUrl, personalGrowthUrl, traumaRecoveryUrl],
 };
 export const TOPIC_IMAGES = {
@@ -29,6 +42,16 @@ export const TOPIC_IMAGES = {
   healthyRelationships: healthyRelationshipsUrl,
   personalGrowth: personalGrowthUrl,
   emotionalWellbeing: emotionalWellbeingUrl,
+};
+export const SERVICE_IMAGES: Record<string, string> = {
+  'relationship-counselling': relationshipCounsellingServiceUrl,
+  'couples-marriage-counselling': couplesMarriageServiceUrl,
+  'trauma-recovery': traumaRecoveryServiceUrl,
+  'narcissistic-abuse': narcissisticRecoveryServiceUrl,
+  'inner-child-resilience': emotionalResilienceServiceUrl,
+  'positive-psychology-coaching': positivePsychologyServiceUrl,
+  'mindfulness-ei': mindfulnessServiceUrl,
+  'grief-healing': griefHealingServiceUrl,
 };
 
 /**
@@ -119,6 +142,8 @@ export const openMail = (subject: string, body: string) => {
 };
 
 export const SERVICES_DATA: ServiceItem[] = [
+  {id:'relationship-counselling',title:'Relationship Counselling',shortDescription:'Explore relationship patterns, communicate your needs and consider healthy boundaries.',fullDescription:'A reflective space to understand recurring relationship patterns, clarify what matters to you and consider ways to communicate your needs. Support is shaped around your circumstances and goals.',iconName:'HeartHandshake',benefits:['Explore relationship patterns', 'Clarify needs and boundaries', 'Consider next steps at your pace'],duration:'Details on enquiry'},
+  {id:'couples-marriage-counselling',title:'Couples & Marriage Counselling',shortDescription:'A supportive space for partners to talk through communication concerns and relationship changes.',fullDescription:'Couples can use counselling to discuss communication, recurring disagreements and life transitions in a supported setting. Sessions make room for each partner’s perspective and help you consider practical next steps together.',iconName:'Users',benefits:['Space for both perspectives', 'Work through communication concerns', 'Explore practical next steps together'],duration:'Details on enquiry'},
   {id:'trauma-recovery',title:'Trauma Recovery',shortDescription:'A gentle, trauma-informed space to make sense of difficult experiences at a pace that feels safe.',fullDescription:'Dr Anne brings trauma-informed psychology together with positive psychology principles to support recovery. No particular outcome can be guaranteed, and support is tailored to you.',iconName:'ShieldCheck',benefits:['Trauma-informed approach', 'A safe, unhurried pace', 'Building steadiness and self-trust'],duration:'Details on enquiry'},
   {id:'narcissistic-abuse',title:'Narcissistic Abuse Recovery',shortDescription:'Support in rebuilding self-trust, clarity and healthy boundaries after emotionally harmful relationships.',fullDescription:'Recovery from narcissistic abuse is listed among Dr Anne’s areas of specialization. Sessions focus on understanding what happened and rebuilding your sense of self.',iconName:'HeartHandshake',benefits:['Rebuilding self-trust', 'Clarity and healthy boundaries', 'Non-judgmental support'],duration:'Details on enquiry'},
   {id:'inner-child-resilience',title:'Emotional Resilience & Inner-Child Work',shortDescription:'Understanding early patterns and building healthier inner foundations to meet life with steadiness.',fullDescription:'Dr Anne helps people heal emotional wounds, rebuild resilience and cultivate healthy inner foundations.',iconName:'Compass',benefits:['Understanding emotional patterns', 'Building resilience', 'Healthier inner foundations'],duration:'Details on enquiry'},
