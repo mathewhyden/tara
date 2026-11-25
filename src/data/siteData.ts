@@ -2,14 +2,7 @@ import logoUrl from '../assets/logo.webp';
 import portraitUrl from '../assets/anne.jpg';
 import heroHealingOfficeUrl from '../assets/photos/hero-healing-office.webp';
 import brandHealEmpowerThriveUrl from '../assets/photos/brand-heal-empower-thrive.jpg';
-import relationshipCounsellingServiceUrl from '../assets/photos/service-relationship-counselling-couple.jpg';
-import couplesMarriageServiceUrl from '../assets/photos/service-couples-marriage-counselling.jpg';
-import traumaRecoveryServiceUrl from '../assets/photos/service-trauma-recovery.jpg';
-import narcissisticRecoveryServiceUrl from '../assets/photos/service-narcissistic-abuse-recovery.jpg';
-import emotionalResilienceServiceUrl from '../assets/photos/service-emotional-resilience.jpg';
-import positivePsychologyServiceUrl from '../assets/photos/service-positive-psychology-coaching.jpg';
-import mindfulnessServiceUrl from '../assets/photos/service-mindfulness-ei.jpg';
-import griefHealingServiceUrl from '../assets/photos/service-grief-healing.jpg';
+import heroCompassionateGuidanceUrl from '../assets/photos/hero-compassionate-guidance.webp';
 import traumaRecoveryUrl from '../assets/photos/trauma-recovery.webp';
 import narcissisticAbuseRecoveryUrl from '../assets/photos/narcissistic-abuse-recovery.webp';
 import emotionalResilienceUrl from '../assets/photos/emotional-resilience.webp';
@@ -44,14 +37,14 @@ export const TOPIC_IMAGES = {
   emotionalWellbeing: emotionalWellbeingUrl,
 };
 export const SERVICE_IMAGES: Record<string, string> = {
-  'relationship-counselling': relationshipCounsellingServiceUrl,
-  'couples-marriage-counselling': couplesMarriageServiceUrl,
-  'trauma-recovery': traumaRecoveryServiceUrl,
-  'narcissistic-abuse': narcissisticRecoveryServiceUrl,
-  'inner-child-resilience': emotionalResilienceServiceUrl,
-  'positive-psychology-coaching': positivePsychologyServiceUrl,
-  'mindfulness-ei': mindfulnessServiceUrl,
-  'grief-healing': griefHealingServiceUrl,
+  'relationship-counselling': heroCompassionateGuidanceUrl,
+  'couples-marriage-counselling': healthyRelationshipsUrl,
+  'trauma-recovery': traumaRecoveryUrl,
+  'narcissistic-abuse': narcissisticAbuseRecoveryUrl,
+  'inner-child-resilience': emotionalResilienceUrl,
+  'positive-psychology-coaching': selfUnderstandingUrl,
+  'mindfulness-ei': mindfulnessUrl,
+  'grief-healing': emotionalWellbeingUrl,
 };
 
 /**
