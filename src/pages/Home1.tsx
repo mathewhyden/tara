@@ -309,8 +309,8 @@ export const Home1: React.FC<Home1Props> = ({
 
         <Carousel label="Areas of support" items={SERVICES_DATA.map((service) => (
           <div key={service.id} className="group bg-white border border-[#E8DCE8] rounded-2xl overflow-hidden h-full flex flex-col hover:shadow-xl transition-shadow duration-300">
-            <div className="relative h-44">
-              <div className="absolute inset-0 overflow-hidden"><img src={SERVICE_IMAGES[service.id]} alt={service.title} className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-700" loading="lazy" /></div>
+            <div className="relative h-44 bg-[#F1E8F1]">
+              <div className="absolute inset-0 overflow-hidden"><img src={SERVICE_IMAGES[service.id]} alt={service.title} className="w-full h-full object-contain" loading="lazy" /></div>
               <div className="absolute bottom-0 left-6 translate-y-1/2 w-14 h-14 rounded-full bg-white shadow-md flex items-center justify-center border border-[#E8DCE8]">{getServiceIcon(service.iconName)}</div>
             </div>
             <div className="p-6 pt-10 flex flex-col flex-1 justify-between">
