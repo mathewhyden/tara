@@ -313,7 +313,7 @@ export const Home1: React.FC<Home1Props> = ({
               <div className="absolute inset-0 overflow-hidden rounded-t-2xl">
                 <img src={SERVICE_IMAGES[service.id]} alt={service.title} className="h-full w-full object-cover object-center" loading="lazy" />
               </div>
-              <div className="absolute bottom-0 left-6 z-10 translate-y-1/2 w-14 h-14 rounded-full bg-white shadow-md flex items-center justify-center border border-[#E8DCE8]">{getServiceIcon(service.iconName)}</div>
+              <div className="absolute bottom-0 left-6 z-20 translate-y-1/2 w-14 h-14 rounded-full bg-white shadow-md flex items-center justify-center border border-[#E8DCE8]">{getServiceIcon(service.iconName)}</div>
             </div>
             <div className="p-6 pt-10 flex flex-col flex-1 justify-between">
               <div>

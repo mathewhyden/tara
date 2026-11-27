@@ -12,6 +12,7 @@ import emotionalWellbeingUrl from '../assets/photos/emotional-wellbeing.webp';
 import healthyRelationshipsUrl from '../assets/photos/healthy-relationships.webp';
 import stressManagementUrl from '../assets/photos/stress-management.webp';
 import selfUnderstandingUrl from '../assets/photos/self-understanding.webp';
+import familyCounsellingUrl from '../assets/photos/family-counselling.webp';
 
 // Use the journaling photo for personal-growth placements; the former garden
 // path image was a poor fit for the site and is no longer used.
@@ -37,14 +38,12 @@ export const TOPIC_IMAGES = {
   emotionalWellbeing: emotionalWellbeingUrl,
 };
 export const SERVICE_IMAGES: Record<string, string> = {
-  'relationship-counselling': heroCompassionateGuidanceUrl,
-  'couples-marriage-counselling': healthyRelationshipsUrl,
-  'trauma-recovery': traumaRecoveryUrl,
-  'narcissistic-abuse': narcissisticAbuseRecoveryUrl,
-  'inner-child-resilience': emotionalResilienceUrl,
+  'adolescent-teen-family': familyCounsellingUrl,
+  'relationship-premarital-marital': healthyRelationshipsUrl,
+  'stress-anxiety-grief': stressManagementUrl,
+  'emotional-intelligence-inner-child': emotionalResilienceUrl,
+  'trauma-narcissistic-recovery': traumaRecoveryUrl,
   'positive-psychology-coaching': selfUnderstandingUrl,
-  'mindfulness-ei': mindfulnessUrl,
-  'grief-healing': emotionalWellbeingUrl,
 };
 
 /**
@@ -135,14 +134,12 @@ export const openMail = (subject: string, body: string) => {
 };
 
 export const SERVICES_DATA: ServiceItem[] = [
-  {id:'relationship-counselling',title:'Relationship Counselling',shortDescription:'Explore relationship patterns, communicate your needs and consider healthy boundaries.',fullDescription:'A reflective space to understand recurring relationship patterns, clarify what matters to you and consider ways to communicate your needs. Support is shaped around your circumstances and goals.',iconName:'HeartHandshake',benefits:['Explore relationship patterns', 'Clarify needs and boundaries', 'Consider next steps at your pace'],duration:'Details on enquiry'},
-  {id:'couples-marriage-counselling',title:'Pre-marital and Marriage Counselling',shortDescription:'A supportive space for partners to talk through communication concerns and relationship changes.',fullDescription:'Couples can use counselling to discuss communication, recurring disagreements and life transitions in a supported setting. Sessions make room for each partner’s perspective and help you consider practical next steps together.',iconName:'Users',benefits:['Space for both perspectives', 'Work through communication concerns', 'Explore practical next steps together'],duration:'Details on enquiry'},
-  {id:'trauma-recovery',title:'Trauma Recovery',shortDescription:'A gentle, trauma-informed space to make sense of difficult experiences at a pace that feels safe.',fullDescription:'Dr Anne brings trauma-informed psychology together with positive psychology principles to support recovery. No particular outcome can be guaranteed, and support is tailored to you.',iconName:'ShieldCheck',benefits:['Trauma-informed approach', 'A safe, unhurried pace', 'Building steadiness and self-trust'],duration:'Details on enquiry'},
-  {id:'narcissistic-abuse',title:'Narcissistic Abuse Recovery',shortDescription:'Support in rebuilding self-trust, clarity and healthy boundaries after emotionally harmful relationships.',fullDescription:'Recovery from narcissistic abuse is listed among Dr Anne’s areas of specialization. Sessions focus on understanding what happened and rebuilding your sense of self.',iconName:'HeartHandshake',benefits:['Rebuilding self-trust', 'Clarity and healthy boundaries', 'Non-judgmental support'],duration:'Details on enquiry'},
-  {id:'inner-child-resilience',title:'Emotional Resilience & Inner-Child Work',shortDescription:'Understanding early patterns and building healthier inner foundations to meet life with steadiness.',fullDescription:'Dr Anne helps people heal emotional wounds, rebuild resilience and cultivate healthy inner foundations.',iconName:'Compass',benefits:['Understanding emotional patterns', 'Building resilience', 'Healthier inner foundations'],duration:'Details on enquiry'},
+  {id:'adolescent-teen-family',title:'Adolescent, Teen & Family Counselling',shortDescription:'A supportive space for young people and families to talk through emotions, communication and changes at home or school.',fullDescription:'Counselling offers adolescents, teens and family members room to share their perspectives, understand concerns and work towards clearer communication. Support is shaped around the young person’s needs and the family’s circumstances.',iconName:'Users',benefits:['Support for young people and families', 'Space to understand each perspective', 'Build healthier communication'],duration:'Details on enquiry'},
+  {id:'relationship-premarital-marital',title:'Relationship, Pre-marital and Marital Counselling',shortDescription:'Explore relationship patterns, communication and shared expectations in a supportive setting.',fullDescription:'A reflective space for individuals or partners to understand relationship patterns, communicate needs and discuss shared expectations before or during marriage. Sessions are shaped around your circumstances and goals.',iconName:'HeartHandshake',benefits:['Explore relationship patterns', 'Discuss expectations and communication', 'Consider next steps at your pace'],duration:'Details on enquiry'},
+  {id:'stress-anxiety-grief',title:'Stress, Anxiety & Grief Counselling',shortDescription:'Gentle support to make sense of stress, anxious feelings or loss at a pace that feels manageable.',fullDescription:'Counselling can provide space to talk about the impact of stress, anxiety or grief, notice what support may help and explore practical ways of coping. There is no fixed timeline for working through loss or difficult feelings.',iconName:'Activity',benefits:['Space to talk without judgment', 'Explore helpful coping approaches', 'Move at a pace that feels manageable'],duration:'Details on enquiry'},
+  {id:'emotional-intelligence-inner-child',title:'Emotional Intelligence & Inner Child Work',shortDescription:'Understand emotional patterns, reconnect with earlier experiences and build more compassionate ways of responding.',fullDescription:'A reflective approach to noticing emotions and recurring patterns, including those connected to earlier experiences. The work is paced collaboratively and focused on building self-understanding and steadier ways to respond.',iconName:'Compass',benefits:['Notice and name emotions', 'Explore recurring patterns', 'Build self-understanding and compassion'],duration:'Details on enquiry'},
+  {id:'trauma-narcissistic-recovery',title:'Trauma & Narcissistic Abuse Recovery',shortDescription:'Trauma-informed support for making sense of difficult experiences and rebuilding self-trust and boundaries.',fullDescription:'A gentle, trauma-informed space to explore the impact of difficult or emotionally harmful experiences. Support is tailored to your circumstances, with attention to safety, self-trust and healthy boundaries.',iconName:'ShieldCheck',benefits:['Trauma-informed approach', 'A safe, unhurried pace', 'Rebuild steadiness, self-trust and boundaries'],duration:'Details on enquiry'},
   {id:'positive-psychology-coaching',title:'Positive Psychology Coaching',shortDescription:'Strengths-based, goal-oriented coaching toward a more intentional life. Coaching is distinct from psychotherapy.',fullDescription:'Dr Anne is an ICF-ACC certified Positive Psychology Coach with training in strengths-based practice.',iconName:'Sparkles',benefits:['Strengths-based growth', 'Clarity and direction', 'Intentional living'],duration:'Details on enquiry'},
-  {id:'mindfulness-ei',title:'Mindfulness & Emotional Intelligence',shortDescription:'Practices for noticing feelings, pausing before reacting and relating more wisely to yourself and others.',fullDescription:'Mindfulness and emotional intelligence are among Dr Anne’s listed areas, and she is also a trained meditation teacher.',iconName:'Activity',benefits:['Awareness of feelings', 'Pausing before reacting', 'Relating with more understanding'],duration:'Details on enquiry'},
-  {id:'grief-healing',title:'Grief Healing',shortDescription:'Company and care while you move through loss in your own way and time.',fullDescription:'Grief healing and strengths-based growth are among Dr Anne’s listed areas of specialization.',iconName:'Users',benefits:['Space for loss', 'No fixed timeline', 'Gentle, steady support'],duration:'Details on enquiry'},
 ];
 
 export const TESTIMONIALS_DATA: Testimonial[] = [];
