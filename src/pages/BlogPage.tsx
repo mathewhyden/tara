@@ -245,7 +245,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({
               </h3>
               <img
                 src={IMG.logo}
-                alt="Dr Anne Rosario"
+                alt="Tara Mindcare logo"
                 className="w-24 h-24 rounded-full mx-auto object-cover border-2 border-[#7F4B7C] mb-3"
               />
               <h4 className="font-serif font-bold text-base text-[#2C2C2C]">

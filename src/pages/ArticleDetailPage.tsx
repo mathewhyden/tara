@@ -183,7 +183,7 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({
             <div className="mt-8 p-6 bg-[#FAF6EE] border-l-4 border-[#7F4B7C] rounded-2xl flex flex-col sm:flex-row gap-5 items-center sm:items-start shadow-xs">
               <img
                 src={IMG.logo}
-                alt="Dr Anne Rosario"
+                alt="Tara Mindcare logo"
                 className="w-20 h-20 rounded-full object-cover border-2 border-[#7F4B7C] flex-shrink-0"
               />
               <div className="text-center sm:text-left space-y-1">
